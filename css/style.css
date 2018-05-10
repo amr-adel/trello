@@ -218,12 +218,18 @@ body {
   background-color: transparent;
   color: var(--color-primary);
   font-size: inherit;
+  letter-spacing: 1px;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
   cursor: pointer;
   transition: all .2s ease-out; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s ease-out; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none; }
 
@@ -271,6 +277,50 @@ body {
       margin-right: -1.5rem; }
 
 /* REVIEWS ================================================================================ */
+.review {
+  background-color: #fff;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    hyphens: auto;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__details {
+    margin-right: auto; }
+  .review__name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase; }
+  .review__date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
+  .review__rating {
+    color: var(--color-primary);
+    font-size: 2.25rem;
+    font-weight: 300; }
+  .review::before {
+    content: '\201c';
+    font-family: sans-serif;
+    font-size: 20rem;
+    line-height: 1;
+    position: absolute;
+    top: -2.5rem;
+    left: -.8rem;
+    color: var(--color-grey-light-2); }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -303,13 +353,13 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   border-bottom: var(--line);
   padding: 4.5rem;
   background-color: var(--color-grey-light-1); }
 
 .description {
-  font-size: 1.4rem;
   flex: 0 0 60%;
   background-color: #fff;
   margin-right: 4.5rem;
@@ -318,3 +368,6 @@ body {
 
 .user-reviews {
   flex: 1; }
+  .user-reviews .btn-inline {
+    margin-left: 50%;
+    transform: translateX(-50%); }

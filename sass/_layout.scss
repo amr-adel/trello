@@ -39,6 +39,7 @@
 }
 
 .detail {
+    font-size: 1.4rem;
     display: flex;
     border-bottom: var(--line);
     padding: 4.5rem;
@@ -46,7 +47,6 @@
 }
 
 .description {
-    font-size: 1.4rem;
     flex: 0 0 60%;
     background-color: #fff;
     margin-right: 4.5rem;
@@ -56,4 +56,9 @@
 
 .user-reviews {
     flex: 1;
+
+    & .btn-inline {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
