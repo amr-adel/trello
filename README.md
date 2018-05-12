@@ -2,6 +2,8 @@
 
 A modern website for fictitious booking app.
 
+[![trillo](img/demo.jpg "trillo")](https://amr-adel.github.io/trillo/)
+
 ## What is this about?
 
 It's the second of three websites built from scratch through the great [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](https://www.udemy.com/advanced-css-and-sass/) course by Jonas Schmedtmann.

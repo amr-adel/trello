@@ -327,6 +327,10 @@
         margin-right: auto;
     }
 
+    &__friends {
+        flex: 0 0 150px;
+    }
+
     &__photo {
         box-sizing: content-box;
         border: 3px solid #fff;
@@ -458,5 +462,110 @@
 
     &:hover {
         background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+    }
+}
+
+/* ==================================================================================== */
+/* MEDIA QUERIES */
+/* ==================================================================================== */
+
+@media only screen and (max-width: 960px) {
+
+    .side-nav {
+        display: flex;
+        margin-top: 0;
+
+        &__item {
+            flex: 1;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item::before {
+            height: 3px;
+            width: 100%;
+            background-color: var(--color-primary);
+            transform: scaleX(0);
+            transition: transform .2s, height .4s cubic-bezier(1, 0, 0, 1) .2s;
+        }
+
+        &__item:hover::before,
+        &__item--active::before {
+            transform: scaleX(1);
+            height: 100%;
+        }
+
+        &__link:link,
+        &__link:visited {
+            padding: 2rem 3rem;
+            justify-content: center;
+        }
+    }
+
+    .legal {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .review {
+        flex: 0 0 calc(50% - 1.5rem);
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+    .search {
+        flex: 0 0 100%;
+        align-self: flex-end;
+        order: -1;
+        
+        &__input {
+            border-radius: 0;
+            width: 100vw;
+            margin-right: 0;
+        }
+
+        &__icon {
+            margin-left: -5rem;
+        }
+    }
+
+    .user-nav {
+        min-height: 7rem;
+    }
+
+    .side-nav {
+        flex-wrap: wrap;
+
+        &__item {
+            flex: 0 0 50%;
+        }
+    }
+
+    .overview {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 2rem 0;
+
+        &__heading {
+            padding: 0;
+            flex: 1 0 60%;
+        }
+    }
+
+    .paragraph {
+        text-align: center;
+    }
+
+    .list__item {
+        flex: 0 0 80%;
+        margin-left: 3rem;
+    }
+
+    .review {
+        flex: 0 0 100%;
     }
 }
